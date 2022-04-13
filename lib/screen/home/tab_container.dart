@@ -34,7 +34,7 @@ class _Tab_ContainerState extends State<Tab_Container> {
                 },
                 tabs: widget.soucers.map((e) => Tab_Item(e,indexSelect==widget.soucers.indexOf(e)?true:false)).toList()),
           ),
-        News_Container(widget.soucers[indexSelect])
+        Expanded(child: News_Container(widget.soucers[indexSelect]))
         ],
       ),
       length: widget.soucers.length,
