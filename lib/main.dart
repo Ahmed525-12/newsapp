@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/screen/home/home_screen.dart';
+import 'package:newsapp/screen/introscreen/introscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,13 +17,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'News app',
       theme: ThemeData(
-      
-        primarySwatch: Colors.blue,
+        primaryColor: const Color.fromARGB(255, 33, 243, 138),
+        appBarTheme: const AppBarTheme(
+          color: Color.fromARGB(255, 33, 243, 138),
+        )
       ),
       routes: {
-        Home_Screen.routename:(context) => Home_Screen()
+        IntroScreen.routename:(context) => IntroScreen(),
       },
-     initialRoute: Home_Screen.routename,
+     initialRoute: IntroScreen.routename,
     );
   }
 }
