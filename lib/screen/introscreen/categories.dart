@@ -3,6 +3,7 @@ import 'package:newsapp/model/category.dart';
 
 import 'category_widget.dart';
 
+// ignore: must_be_immutable
 class CAtegoriesIntro extends StatelessWidget {
   Function onCategoryClick;
   CAtegoriesIntro(this.onCategoryClick, {Key? key}) : super(key: key);

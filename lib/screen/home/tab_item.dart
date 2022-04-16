@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/model/sources.dart';
 
-class Tab_Item extends StatelessWidget {
+// ignore: must_be_immutable
+class TabItem extends StatelessWidget {
   Sources1 sources;
   bool isSelected;
-  Tab_Item(this.sources, this.isSelected, {Key? key}) : super(key: key);
+  TabItem(this.sources, this.isSelected, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 24,vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 8),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color:

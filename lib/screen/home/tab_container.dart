@@ -3,16 +3,17 @@ import 'package:newsapp/model/sources.dart';
 import 'package:newsapp/screen/home/news_container.dart';
 import 'package:newsapp/screen/home/tab_item.dart';
 
-class Tab_Container extends StatefulWidget {
+// ignore: must_be_immutable
+class TabContainer extends StatefulWidget {
   List<Sources1> soucers;
 
-  Tab_Container(this.soucers, {Key? key}) : super(key: key);
+  TabContainer(this.soucers, {Key? key}) : super(key: key);
 
   @override
-  State<Tab_Container> createState() => _Tab_ContainerState();
+  State<TabContainer> createState() => _TabContainerState();
 }
 
-class _Tab_ContainerState extends State<Tab_Container> {
+class _TabContainerState extends State<TabContainer> {
 
   int indexSelect=0;
   @override
@@ -32,9 +33,9 @@ class _Tab_ContainerState extends State<Tab_Container> {
                     
                   });
                 },
-                tabs: widget.soucers.map((e) => Tab_Item(e,indexSelect==widget.soucers.indexOf(e)?true:false)).toList()),
+                tabs: widget.soucers.map((e) => TabItem(e,indexSelect==widget.soucers.indexOf(e)?true:false)).toList()),
           ),
-        Expanded(child: News_Container(widget.soucers[indexSelect]))
+        Expanded(child: NewsContainer(widget.soucers[indexSelect]))
         ],
       ),
       length: widget.soucers.length,

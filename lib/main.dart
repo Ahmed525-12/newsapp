@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/screen/home/home_screen.dart';
+
 import 'package:newsapp/screen/introscreen/introscreen.dart';
 
 void main() {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         )
       ),
       routes: {
-        IntroScreen.routename:(context) => IntroScreen(),
+        IntroScreen.routename:(context) => const IntroScreen(),
       },
      initialRoute: IntroScreen.routename,
     );

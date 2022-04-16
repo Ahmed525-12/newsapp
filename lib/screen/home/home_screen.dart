@@ -5,16 +5,17 @@ import 'package:newsapp/screen/home/tab_container.dart';
 
 import '../../api/api_manager.dart';
 
-class Home_Screen extends StatefulWidget {
+// ignore: must_be_immutable
+class HomeScreen extends StatefulWidget {
   static const String routename = "home screen";
   Category category;
-  Home_Screen(this.category, {Key? key}) : super(key: key);
+  HomeScreen(this.category, {Key? key}) : super(key: key);
 
   @override
-  State<Home_Screen> createState() => _Home_ScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _Home_ScreenState extends State<Home_Screen> {
+class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +49,7 @@ class _Home_ScreenState extends State<Home_Screen> {
               );
             }
             var sourcesList = snapshot.data?.sources ?? [];
-            return Tab_Container(sourcesList);
+            return TabContainer(sourcesList);
           },
           future: ApiManager.getSources(widget.category.id),
         ),

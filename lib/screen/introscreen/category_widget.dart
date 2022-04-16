@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/model/category.dart';
 
+// ignore: must_be_immutable
 class CategoryWidget extends StatelessWidget {
   Category category;
   int index;

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 
 import 'package:http/http.dart' as http;
 import 'package:newsapp/model/news_respose.dart';
@@ -18,7 +17,7 @@ class ApiManager {
       var sourceResponse = Sources.fromJson(json);
       return sourceResponse;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -31,7 +30,7 @@ class ApiManager {
       var newsResponse = NewsRespose.fromJson(json);
        return newsResponse;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

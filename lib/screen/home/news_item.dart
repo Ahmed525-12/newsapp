@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/model/news_respose.dart';
 
+// ignore: must_be_immutable
 class NewsWidget extends StatelessWidget {
   News news;
   NewsWidget(this.news, {Key? key}) : super(key: key);
